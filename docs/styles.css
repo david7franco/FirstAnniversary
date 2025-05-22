@@ -66,6 +66,7 @@ body {
   .timeline-wrapper {
     overflow-x: auto;
     padding-bottom: 1rem;
+    -webkit-overflow-scrolling: touch;
   }
   
   .timeline-horizontal {
