@@ -20,6 +20,7 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     z-index: 1030;
+
   }
   
   .love-nav .nav-link {
@@ -39,10 +40,9 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    padding: 2rem;
+    text-align: center;;
     margin-top: -300px;
-    padding-top: 0;
+    padding-top: 80px;
   }
   .carousel-inner img {
     object-fit: cover;
