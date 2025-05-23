@@ -58,15 +58,32 @@ body {
     justify-content: center;
     align-items: center;
   }
-  .carousel-inner img {
-    object-fit: cover;
-    height: 660px;
-    padding: 50px;
-  }
   #anniversaryCarousel {
     margin-top: -300px;
   }
-
+  .carousel-inner {
+    display: flex;
+    background-color: #000; /* optional for letterbox effect */
+  }
+  
+  .carousel-image {
+    width: auto;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+  @media (max-width: 844px) {
+    .carousel-inner {
+      height: 50vh; 
+    }
+  }
+  
+  @media (max-width: 390px) {
+    .carousel-inner {
+      height: 40vh; 
+    }
+  }
   .hero h1 {
     font-family: 'Dancing Script', cursive;
     font-size: 4rem;
@@ -126,6 +143,16 @@ body {
     margin: -2rem auto 0.5rem;
     position: relative;
     z-index: 2;
+  }
+  .circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    margin: 0 auto; 
   }
   
   /* Responsive switch to vertical */
