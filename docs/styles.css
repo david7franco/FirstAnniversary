@@ -32,21 +32,36 @@ body {
     color: #880e4f;
     text-decoration: underline;
   }
-  
-  .hero {
-    background: url('your-photo.jpg') center/cover no-repeat;
-    height: 100vh;
-    color: white;
+
+  .para {
+    font-family: 'Dancing Script', cursive;
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    text-align: center;
     justify-content: center;
-    text-align: center;;
-    margin-top: -300px;
-    padding-top: 80px;
+    align-items: center;
+    margin-bottom: 300px;
+  }
+  .title {
+    font-size: 3rem; /* Set to your desired size */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dancing Script', cursive;
+    padding: 20px;
+  
+  }
+  .para1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 2rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   .carousel-inner img {
     object-fit: cover;
-    height: 600px;
+    height: 660px;
+    padding: 50px;
   }
   #anniversaryCarousel {
     margin-top: -300px;
