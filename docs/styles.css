@@ -172,11 +172,11 @@ body {
     .timeline-event {
       width: 90%;
       margin: 2rem 0;
-      text-align: left;
+      text-align: center;
     }
   
     .timeline-event .circle {
-      margin-left: -20px;
+      margin-left: 2px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -194,11 +194,30 @@ body {
   .love-note:hover {
     transform: translateY(-5px);
   }
+  .gradient-border {
+    background: linear-gradient(135deg, #ffb6c1, #ffe4e1, #d8bfd8);
+    padding: 4px;
+    border-radius: 1rem;
+  }
   
-  .note {
-    border-left: 3px solid #ffc107;
+  .gradient-border > ul {
+    background-color: white;
+    border-radius: 0.75rem;
+    padding: 1rem;
+    margin: 0;
+  }
+  
+  .special-spots {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .note1 {
     padding-left: 1rem;
     margin-bottom: 1rem;
+    font-size: 3rem;
   }
   
   .footer {
