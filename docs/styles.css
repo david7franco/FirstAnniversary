@@ -219,10 +219,16 @@ body {
     margin-bottom: 1rem;
     font-size: 3rem;
   }
-  
+  .footerSurprise {
+    font-size: .7rem;
+    text-align: right;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
   .footer {
     background-color: #fce4ec;
     text-align: center;
-    padding: 2rem;
+    padding: 1rem;
   }
   
