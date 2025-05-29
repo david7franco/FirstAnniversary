@@ -181,7 +181,23 @@ body {
       transform: translateX(-50%);
     }
   }
-  
+  .spotify-embed {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.6s ease, opacity 0.6s ease;
+  }
+  .spotify-embed.show {
+    max-height: 150px; 
+    opacity: 1;
+  }
+  #favorite-song {
+    cursor: pointer;
+  }
+
+  .list-group-item {
+    cursor: pointer;
+  }
   .love-note {
     border-left: 5px solid #ffb6c1;
     background-color: #fff0f5;
@@ -218,6 +234,35 @@ body {
     padding-left: 1rem;
     margin-bottom: 1rem;
     font-size: 3rem;
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+  .sticky-note {
+    background: #fff8b3;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Indie Flower', cursive;
+    font-size: 1.1rem;
+    color: #2c2c2c;
+    resize: none;
+    border-radius: 10px;
+    padding: 1.2rem;
+    min-height: 150px;
+  }
+  
+  /* Animate the wrapper for smooth drop-down */
+  .note-wrapper {
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .note-wrapper.show {
+    opacity: 1;
+    transform: translateY(0);
   }
   .footerSurprise {
     font-size: .7rem;

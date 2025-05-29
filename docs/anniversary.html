@@ -165,7 +165,7 @@
   <div class="text-center mb-4">
     <p class="lead">A few special spots we've visited together!</p>
     <div class="ratio ratio-16x9">
-      <iframe src="https://www.google.com/maps/d/embed?mid=1lPeER2KZJHY2Y3LIPTH5n-qqwwJQ2PQ&ehbc=2E312F"
+      <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1lPeER2KZJHY2Y3LIPTH5n-qqwwJQ2PQ&ehbc=2E312F&noprof=1"
         width="640" 
         height="480" 
         allowfullscreen
@@ -209,10 +209,50 @@
   <section id="favorites" class="container py-5">
     <h2 class="section-title">Our Favorites</h2>
     <ul class="list-group">
-      <li class="list-group-item">Favorite Trip: Our Honeymoon! 💫</li>
-      <li class="list-group-item">Favorite Song: "Dream a Little Dream of Me" 🎶</li>
-      <li class="list-group-item">Favorite Keepsake: Snoopy </li>
-      <li class="list-group-item">Favorite Cute thing: Notes in the Morning! 😄</li>
+      <li class="list-group-item">
+        <a class="text-decoration-none text-body" data-bs-toggle="collapse" href="#favoriteTrip" role="button" aria-expanded="false" aria-controls="favoriteTrip">
+          Favorite Trip: <strong> "Our Honeymoon!" 💫</strong>
+        </a>
+        <div class="collapse mt-3" id="favoriteTrip">
+          <img src="imgs/LBILightHouse.jpg" 
+               alt="LBILightHouse" 
+               class="img-fluid rounded shadow-sm"
+               style="max-height: 200px;">
+        </div>
+
+      </li>
+      <li class="list-group-item" id="favorite-song">
+        Favorite Song: <strong>"Dream a Little Dream of Me" 🎶</strong>
+        <div class="spotify-embed mt-2">
+          <iframe style="border-radius:12px" 
+                  src="https://open.spotify.com/embed/track/2vfINZ5Xnf1HggzoQKgqps?utm_source=generator" 
+                  width="100%" 
+                  height="80" 
+                  frameborder="0" 
+                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                  loading="lazy">
+          </iframe>
+        </div>
+      </li>
+      <li class="list-group-item">
+        <a class="text-decoration-none text-body" data-bs-toggle="collapse" href="#snoopyImage" role="button" aria-expanded="false" aria-controls="snoopyImage">
+          Favorite Keepsake: <strong>Snoopy 🐾 </strong> 
+        </a>
+        <div class="collapse mt-3" id="snoopyImage">
+          <img src="imgs/snoopy.avif" 
+               alt="Snoopy" 
+               class="img-fluid rounded shadow-sm"
+               style="max-height: 200px;">
+        </div>
+      </li>
+      <li class="list-group-item">
+        <a class="text-decoration-none text-body" data-bs-toggle="collapse" href="#stickyNoteCollapse" role="button" aria-expanded="false" aria-controls="stickyNoteCollapse">
+          Favorite Cute Thing: <strong>Notes in the Morning! 😄</strong>
+        </a>
+        <div class="collapse mt-3" id="stickyNoteCollapse">
+          <textarea id="stickyNote" class="sticky-note w-100"></textarea>
+        </div>
+      </li>
     </ul>
   </section>
 
@@ -278,6 +318,37 @@
         once: true,
       });
     </script>
+  <script>
+    const favoriteSongItem = document.getElementById('favorite-song');
+    const spotifyEmbed = favoriteSongItem.querySelector('.spotify-embed');
 
+    favoriteSongItem.addEventListener('click', () => {
+      spotifyEmbed.classList.toggle('show');
+    });
+  </script>
+  <script>
+    // Animate the sticky note when it's shown
+    const collapseNote = document.getElementById('noteInput');
+    collapseNote.addEventListener('show.bs.collapse', () => {
+      collapseNote.classList.add('show');
+    });
+  
+    collapseNote.addEventListener('hide.bs.collapse', () => {
+      collapseNote.classList.remove('show');
+    });
+  </script>
+  <script>
+    const note = document.getElementById('stickyNote');
+  
+    // Load saved note
+    note.value = localStorage.getItem('morningNote') || '';
+  
+    // Save note on input
+    note.addEventListener('input', () => {
+      localStorage.setItem('morningNote', note.value);
+    });
+  </script>
+  
+  
 </body>
 </html>
